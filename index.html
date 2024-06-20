@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam Online✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Cek Khodam GRATIS!</h1>
+        <p>Masukkan nama untuk mengetahui khodam</p>
+        <input type="text" id="nameInput" class="input-name" placeholder="Ketik nama kamu di sini">
+        <button onclick="resetForm()" style="margin-top: 20px;">Cek Lagi</button>
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+        <button onclick="cekKhodam()">Cek Khodam</button>
+        <div id="result">
+            <h2 id="khodamName"></h2>
+            <p id="khodamMeaning"></p>
+        </div>
+    </div>
+    <div class="footer" style="user-select: none;">
+        Copyright ©2024 | <a href="https://www.tiktok.com/@sillvia_noviana27?_t=8mtXAMXujv0&_r=1" 
+        target="_blank">Via`Novi~ studio</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="script.js"></script>
+</body>
+</html>
