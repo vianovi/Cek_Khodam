@@ -15,9 +15,9 @@
         <h1>Cek Khodam GRATIS!</h1>
         <p>Masukkan nama untuk mengetahui khodam</p>
         <input type="text" id="nameInput" placeholder="Nama">
-        <button onclick="resetForm()" style="margin-top: 20px;">Cek Lagi</button>
+        <button id="cekLagiButton" onclick="resetForm()" style="margin-top: 20px;">Cek Lagi</button>
         <div id="loading" class="loading-spinner" style="display: none;"></div>
-        <button onclick="cekKhodam()">Cek Khodam</button>
+        <button id="cekKhodamButton" onclick="cekKhodam()">Cek Khodam</button>
         <div id="result">
             <h2 id="khodamName"></h2>
             <p id="khodamMeaning"></p>
