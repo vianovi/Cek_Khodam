@@ -505,3 +505,18 @@ function cekKhodam() {
             document.getElementById('nameInput').value = '';
             document.getElementById('result').style.display = 'none';
         }
+
+        function takeScreenshot() {
+            var node = document.getElementById('content');
+
+            domtoimage.toPng(node)
+                .then(function (dataUrl) {
+                    var link = document.createElement('a');
+                    link.download = 'via`novi_cek_khodam.png';
+                    link.href = dataUrl;
+                    link.click();
+                })
+                .catch(function (error) {
+                    console.error('oops, something went wrong!', error);
+                });
+        }

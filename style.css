@@ -1,5 +1,7 @@
 body {
-    background-color: rgba(74, 34, 12, 0.9); /* Background lebih gelap */
+    background-image: url('img/download.jpeg');
+    background-size: cover;
+    background-position: center;
     font-family: 'Poppins', sans-serif; /* Font modern Poppins */
     display: flex;
     flex-direction: column;
@@ -14,40 +16,55 @@ body {
 }
 
 .card {
-    background-color: rgba(147, 148, 171, 0.25);
-    padding: 20px;
-    border: 1px solid #FFA500; /* Border jingga ke kuningan */
+    background-color: rgba(171, 167, 147, 0.25);
+    padding: 20px; /* Menambahkan padding */
+    line-height: 1.6; /* Mengatur jarak antar baris */
+    border: 1px solid #ffa200; 
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap */
-    backdrop-filter: blur(10px); /* Blur lebih kuat */
+    backdrop-filter: blur(4px); /* Blur lebih kuat */
     position: relative; /* Untuk positioning spinner */
 }
 
 h1, p {
-    color: #FFA500; /* Warna font jingga ke kuningan */
-    margin-bottom: 20px;
+    color: #ffffff; /* Warna font jingga ke kuningan */
+    margin-bottom: 10px; /* Menambahkan margin di bawah setiap elemen h1 dan p */
+    font-size: 16px; /* Mengatur ukuran font */
 }
 
-.input-name {
+
+#link_ss{
+    color: #FFFFFF;
+}
+
+#nameInput {
     width: 400px;
     height: 50px;
-    border: none;
+    border: 2px solid #ffa200;
     outline: none;
     padding-left: 25px;
     font-weight: 500;
-    color: #666;
+    color: #ffffff;
     border-radius: 50px;
     font-size: 18px;
-}
-
-.input-name placeholder {
-    color: #666;
+    background: transparent;
     text-transform: capitalize;
 }
-.input-name:focus {
-    border: 2px solid #FFA500;
+
+#nameInput::placeholder {
+    color: #efefef9b;
+}
+
+#nameInput:focus {
+    border: 2px solid #439c8f;
+}
+
+#khodamMeaning {
+    color: #ffa200;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 button {
@@ -68,19 +85,20 @@ button:hover {
 }
 
 .footer {
-    color: #97D3FF;
+    color: #FFFFFF;
     font-weight: bold;
     position: absolute;
     bottom: 10px;
     width: 100%;
     text-align: center;
+    z-index: 1; /* Menambahkan z-index untuk menghindari tumpang tindih */
 }
 
 .footer a {
-    color: #97D3FF;
+    color: #FFFFFF;
     text-decoration: none;
+    z-index: 2; /* Menambahkan z-index untuk menghindari tumpang tindih */
 }
-
 #result {
     display: none;
 }
@@ -110,5 +128,13 @@ button:hover {
     }
     .input-name {
         width: 50%;
+    }
+    .footer {
+        position: static; /* Agar footer tetap di luar card */
+        margin-top: 20px; /* Menambahkan jarak di atas footer */
+    }
+    .footer a {
+        display: block; /* Agar link footer mengikuti ukuran footer */
+        max-width: 100%; /* Ukuran maksimal elemen latar belakang mengikuti ukuran footer */
     }
 }

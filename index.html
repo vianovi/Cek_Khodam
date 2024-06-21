@@ -14,14 +14,14 @@
     <div id="content" class="card">
         <h1>Cek Khodam GRATIS!</h1>
         <p>Masukkan nama untuk mengetahui khodam</p>
-        <input type="text" id="nameInput" class="input-name" placeholder="Nama">
+        <input type="text" id="nameInput" placeholder="Nama">
         <button onclick="resetForm()" style="margin-top: 20px;">Cek Lagi</button>
         <div id="loading" class="loading-spinner" style="display: none;"></div>
         <button onclick="cekKhodam()">Cek Khodam</button>
         <div id="result">
             <h2 id="khodamName"></h2>
             <p id="khodamMeaning"></p>
-            <button onclick="takeScreenshot()">Ambil Screenshot</button>
+            <p id="link_ss">Bagikan ke teman mu dengan, <a style="color: #439c8f;" onclick="takeScreenshot()" style="text-decoration: underline;">'klik di sini'</a> untuk Screenshot</p>
         </div>
     </div>
     <div class="footer" style="user-select: none;">
@@ -30,21 +30,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="script.js"></script>
-    <script>
-        function takeScreenshot() {
-            var node = document.getElementById('content');
-
-            domtoimage.toPng(node)
-                .then(function (dataUrl) {
-                    var link = document.createElement('a');
-                    link.download = 'via`novi_cek_khodam.png';
-                    link.href = dataUrl;
-                    link.click();
-                })
-                .catch(function (error) {
-                    console.error('oops, something went wrong!', error);
-                });
-        }
-    </script>
 </body>
 </html>
