@@ -90,6 +90,13 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow lebih dalam saat hover */
 }
 
+@media (max-width: 480px) {
+    button {
+        margin-top: 5px; /* Menambahkan margin atas */
+        margin-bottom: 5px; /* Menambahkan margin bawah */
+    }
+}
+
 .footer {
     color: #FFFFFF;
     font-weight: bold;
