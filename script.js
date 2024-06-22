@@ -9,6 +9,7 @@ function cekKhodam() {
         return;
     }
     document.getElementById('loading').style.display = 'block'; // Tampilkan spinner
+    document.getElementById('cekKhodamButton').style.display = 'none';
     setTimeout(() => {
         const khodams = [
         { name: "Harimau Putih", meaning: "Kamu kuat dan berani seperti harimau, karena pendahulumu mewariskan kekuatan besar padamu." },
@@ -503,6 +504,7 @@ function cekKhodam() {
 
         function resetForm() {
             document.getElementById('nameInput').value = '';
+            document.getElementById('cekKhodamButton').style.display = 'inline';
             document.getElementById('result').style.display = 'none';
         }
 

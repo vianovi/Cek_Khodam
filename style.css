@@ -30,19 +30,23 @@ body {
     width: 100%;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap */
-    backdrop-filter: blur(4px); /* Blur lebih kuat */
+    backdrop-filter: blur(17px); /* Blur lebih kuat */
     position: relative; /* Untuk positioning spinner */
 }
 
-h1, p {
-    color: #ffffff; /* Warna font jingga ke kuningan */
-    margin-bottom: 10px; /* Menambahkan margin di bawah setiap elemen h1 dan p */
-    font-size: 16px; /* Mengatur ukuran font */
+.card h1{
+    color:#ffa200
 }
 
-
-#link_ss{
-    color: #FFFFFF;
+.card p{
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-style: italic;
+    border-radius: 10px;
+    border-top: 10px;
+    border-bottom: 10px;
+    z-index: 1;
 }
 
 #nameInput {
@@ -51,7 +55,7 @@ h1, p {
     border: 2px solid #ffa200;
     outline: none;
     padding-left: 25px;
-    font-weight: 500;
+    font-weight: 200;
     color: #ffffff;
     border-radius: 50px;
     font-size: 18px;
@@ -67,10 +71,18 @@ h1, p {
     border: 2px solid #439c8f;
 }
 
-#khodamMeaning {
-    color: #ffa200;
+#khodamName {
+    color: #ffffff;
     text-transform: capitalize;
     font-weight: bold;
+    font-size: 20px;
+}
+
+#khodamMeaning {
+    color: #f48a00;
+    text-transform: capitalize;
+    margin-top: auto;
+    font-weight: bold 10000px;
 }
 
 button {
@@ -90,6 +102,10 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow lebih dalam saat hover */
 }
 
+#cekKhodamButton{
+    margin-top: 20px;
+}
+
 @media (max-width: 480px) {
     button {
         margin-top: 5px; /* Menambahkan margin atas */
@@ -97,18 +113,35 @@ button:hover {
     }
 }
 
-.footer {
+#link_ss{
     color: #FFFFFF;
+    font-size: 16px;
+    bottom: 0.5px;
+    margin-bottom: none;
+}
+
+#link_ss a{
+    color: #439c8f;
+    text-decoration:underline;
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.footer {
+    color: #b37b19;
+    font-size: 15px;
     font-weight: bold;
     position: absolute;
-    bottom: 10px;
+    margin-bottom: 10px;
+    bottom: 0.5px;
     width: 100%;
     text-align: center;
     z-index: 1; /* Menambahkan z-index untuk menghindari tumpang tindih */
 }
 
 .footer a {
-    color: #FFFFFF;
+    color: inherit;
     text-decoration: none;
     z-index: 2; /* Menambahkan z-index untuk menghindari tumpang tindih */
 }
@@ -128,6 +161,7 @@ button:hover {
     margin-top: -20px; /* Setengah dari tinggi */
     margin-left: -20px; /* Setengah dari lebar */
     animation: spin 1s linear infinite;
+    z-index: 2;
 }
 
 @keyframes spin {
