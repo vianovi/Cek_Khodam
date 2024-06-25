@@ -8,8 +8,12 @@ function cekKhodam() {
         });
         return;
     }
+    document.getElementById('nameInput').style.display = 'none';
+    document.getElementById('text_input').style.display = 'none';
     document.getElementById('loading').style.display = 'block'; // Tampilkan spinner
+    document.getElementById('loading-text').style.display = 'block'; // Tampilkan spinner
     document.getElementById('cekKhodamButton').style.display = 'none';
+    // document.getElementById('nameInput').readOnlly = true;
     setTimeout(() => {
         const khodams = [
         { name: "Harimau Putih", meaning: "Kamu kuat dan berani seperti harimau, karena pendahulumu mewariskan kekuatan besar padamu." },
@@ -495,17 +499,23 @@ function cekKhodam() {
                     // Tambahkan khodam lainnya sesuai kebutuhan
                 ];
                 const khodam = khodams[Math.floor(Math.random() * khodams.length)];
-                document.getElementById('khodamName').innerText = `Khodam: ${khodam.name}`;
+                var nameInput = document.getElementById('nameInput').value;
+                document.getElementById('output').innerText = `${nameInput}:`;
+                document.getElementById('khodamName').innerText = khodam.name;
                 document.getElementById('khodamMeaning').innerText = khodam.meaning;
                 document.getElementById('result').style.display = 'block';
                 document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
+                document.getElementById('loading-text').style.display = 'none'; // Sembunyikan spinner
             }, 2000); // Delay untuk simulasi loading
         }
-
+        
         function resetForm() {
             document.getElementById('nameInput').value = '';
             document.getElementById('cekKhodamButton').style.display = 'inline';
             document.getElementById('result').style.display = 'none';
+            document.getElementById('text_input').style.display = 'block';
+            document.getElementById('nameInput').style.display = 'inline';
+            // document.getElementById('nameInput').readOnlly = false;
         }
 
         function takeScreenshot() {
@@ -514,7 +524,7 @@ function cekKhodam() {
             domtoimage.toPng(node)
                 .then(function (dataUrl) {
                     var link = document.createElement('a');
-                    link.download = 'via`novi_cek_khodam.png';
+                    link.download = 'via`novi_cek khodam.png';
                     link.href = dataUrl;
                     link.click();
                 })
