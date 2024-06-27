@@ -2,12 +2,14 @@ function cekKhodam() {
     const nameInput = document.getElementById('nameInput').value;
     if (!nameInput) {
         Swal.fire({
-            title: 'GAK BOLEH KOSONG!😡',
-            icon: 'error',
+            title: 'LU kira klo gk ada namanya bisa di cek khodam nya??😡',
+            imageUrl: 'img/682010-removebg-preview.png',
+            imageHeight: 100,  // Sesuaikan tinggi gambar jika diperlukan
             confirmButtonText: 'OK'
         });
         return;
     }
+    
     document.getElementById('nameInput').style.display = 'none';
     document.getElementById('text_input').style.display = 'none';
     document.getElementById('loading').style.display = 'block'; // Tampilkan spinner
